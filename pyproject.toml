@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "benchmark-fastapi"
+version = "0.1.0"
+description = ""
+authors = ["Olly <tools.kyr4g@aleeas.com>"]
+readme = "README.md"
+packages = [{include = "benchmark_fastapi"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.89.1"
+uvicorn = "^0.20.0"
+sqlalchemy = {extras = ["asyncio"], version = "^2.0.0"}
+aiosqlite = "^0.18.0"
+alembic = "^1.9.2"
+asyncpg = "^0.27.0"
+psycopg2-binary = "^2.9.5"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.12.0"
+isort = "^5.12.0"
+mypy = "^0.991"
+flake8 = "^6.0.0"
+pytest = "^7.2.1"
+pytest-cov = "^4.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
