@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
+from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 
 SYNC_URL = "postgresql+psycopg2://user:password@localhost:5432/benchmark"
 ASYNC_URL = "postgresql+asyncpg://user:password@localhost:5432/benchmark"

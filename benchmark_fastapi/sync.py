@@ -1,8 +1,9 @@
 from typing import Generator, Sequence
-from fastapi import FastAPI, Depends
+
+import uvicorn
+from fastapi import Depends, FastAPI
 from sqlalchemy import select
 from sqlalchemy.orm import Session
-import uvicorn
 
 from benchmark_fastapi import db, models, schemas
 

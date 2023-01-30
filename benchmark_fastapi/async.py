@@ -1,8 +1,9 @@
 from typing import AsyncIterator, Sequence
-from fastapi import FastAPI, Depends
+
+import uvicorn
+from fastapi import Depends, FastAPI
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
-import uvicorn
 
 from benchmark_fastapi import db, models, schemas
 
